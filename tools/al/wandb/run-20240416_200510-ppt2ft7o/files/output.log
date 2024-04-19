@@ -1,0 +1,21 @@
+Using GPU : 0.
+Experiment Directory is /home/chominhi/work/init-pools-dal-main/tools/output/CIFAR100/resnet18/2024_4_16_20510.
+======== PREPARING DATA AND MODEL ========
+Preprocess Operations Selected ==>  [RandomCrop(size=(32, 32), padding=4), RandomHorizontalFlip(p=0.5), ToTensor(), Normalize(mean=[0.4914, 0.4822, 0.4465], std=[0.247, 0.2435, 0.2616])]
+Files already downloaded and verified
+Files already downloaded and verified
+Dataset CIFAR100 Loaded Sucessfully.
+Total Train Size: 50000 and Total Test Size: 10000
+Sampling Initial Pool using VAE.
+Traceback (most recent call last):
+  File "/home/chominhi/work/init-pools-dal-main/tools/al/train_al.py", line 591, in <module>
+    main(cfg)
+  File "/home/chominhi/work/init-pools-dal-main/tools/al/train_al.py", line 158, in main
+    lSet, uSet = InitialPool(cfg).sample_from_uSet(train_data)
+  File "/home/chominhi/work/init-pools-dal-main/pycls/init/init_main.py", line 34, in sample_from_uSet
+    initSet, uSet = SelfSupervisionSampling(dataset=dataset, budgetSize=budgetSize,
+  File "/home/chominhi/work/init-pools-dal-main/pycls/init/sampling.py", line 59, in __init__
+    losses = np.load(file_path)
+  File "/home/chominhi/work/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/chominhi/work/init-pools-dal-main/cifar-100//CIFAR100_VAE_losses.npy'

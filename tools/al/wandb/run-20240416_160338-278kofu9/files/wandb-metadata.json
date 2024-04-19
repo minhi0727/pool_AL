@@ -1,0 +1,103 @@
+{
+    "os": "Linux-6.5.0-27-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-04-16T07:03:39.736793",
+    "startedAt": "2024-04-16T07:03:38.790533",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--cfg",
+        "/home/chominhi/work/init-pools-dal-main/configs/cifar10/ssl/VAE_IM.yaml",
+        "--exp-name",
+        "auto",
+        "--init",
+        "vae",
+        "--al",
+        "random"
+    ],
+    "state": "running",
+    "program": "/home/chominhi/work/init-pools-dal-main/tools/al/train_al.py",
+    "codePathLocal": "train_al.py",
+    "codePath": "train_al.py",
+    "host": "chominhi-MS-7C52",
+    "username": "chominhi",
+    "executable": "/home/chominhi/work/bin/python",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 3741.198166666667,
+        "min": 2200.0,
+        "max": 3700.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4647.51,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3841.373,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4633.385,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4006.798,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4128.777,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4642.054,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3812.025,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4259.151,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3919.758,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4626.345,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4111.825,
+            "min": 2200.0,
+            "max": 3700.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 915.3232879638672,
+            "used": 27.435523986816406
+        }
+    },
+    "memory": {
+        "total": 31.256832122802734
+    }
+}

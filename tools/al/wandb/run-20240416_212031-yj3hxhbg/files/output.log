@@ -1,0 +1,43 @@
+Using GPU : 3.
+Experiment Directory is /home/chominhi/work/init-pools-dal-main/tools/output/CIFAR10/resnet18/2024_4_16_212031.
+======== PREPARING DATA AND MODEL ========
+Preprocess Operations Selected ==>  [RandomCrop(size=(32, 32), padding=4), RandAugment CIFAR10 Policy with Cutout, ToTensor(), Normalize(mean=[0.4914, 0.4822, 0.4465], std=[0.247, 0.2435, 0.2616])]
+Files already downloaded and verified
+Files already downloaded and verified
+Dataset CIFAR10 Loaded Sucessfully.
+Total Train Size: 50000 and Total Test Size: 10000
+Sampling Initial Pool using VAE.
+Data Partitioning Complete.
+Labeled Set: 0, Unlabeled Set: 0, Validation Set: 0
+0
+0
+0
+model: resnet18
+optimizer: SGD (
+Parameter Group 0
+    dampening: 0.0
+    differentiable: False
+    foreach: None
+    lr: 0.025
+    maximize: False
+    momentum: 0.9
+    nesterov: True
+    weight_decay: 0.0003
+)
+Max AL Episodes: 5
+======== EPISODE 0 BEGINS ========
+======== TRAINING ========
+Traceback (most recent call last):
+  File "/home/chominhi/work/init-pools-dal-main/tools/al/train_al.py", line 591, in <module>
+    main(cfg)
+  File "/home/chominhi/work/init-pools-dal-main/tools/al/train_al.py", line 214, in main
+    best_val_acc, best_val_epoch, checkpoint_file = train_model(lSet_loader, valSet_loader, model, optimizer, cfg)
+  File "/home/chominhi/work/init-pools-dal-main/tools/al/train_al.py", line 298, in train_model
+    train_loss, clf_iter_count = train_epoch(train_loader, model, loss_fun, optimizer, train_meter, \
+  File "/home/chominhi/work/init-pools-dal-main/tools/al/train_al.py", line 479, in train_epoch
+    train_meter.log_epoch_stats(cur_epoch)
+  File "/home/chominhi/work/init-pools-dal-main/pycls/utils/meters.py", line 135, in log_epoch_stats
+    stats = self.get_epoch_stats(cur_epoch)
+  File "/home/chominhi/work/init-pools-dal-main/pycls/utils/meters.py", line 123, in get_epoch_stats
+    top1_err = self.num_top1_mis / self.num_samples
+ZeroDivisionError: division by zero
